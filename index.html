@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Md. Sofiqul Islam - Software Engineer, Full Stack Developer, and AI & Machine Learning Enthusiast. Portfolio showcasing intelligent systems, web apps, and CSE research.">
+    <meta name="keywords" content="Md. Sofiqul Islam, Software Engineer, Full Stack Developer, AI, Machine Learning, Portfolio, CSE, Green University of Bangladesh">
+    <meta name="author" content="Md. Sofiqul Islam">
+    <meta property="og:title" content="Md. Sofiqul Islam | Software Engineer Portfolio">
+    <meta property="og:description" content="Intelligent software solutions, full-stack web applications, and AI & Machine Learning systems.">
+    <meta property="og:image" content="assets/profile.png">
+    <meta property="og:type" content="website">
+    
+    <title>Md. Sofiqul Islam | Software Engineer & AI Enthusiast</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="loading-active">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-outline"></div>
+
+    <!-- Background Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Futuristic Loading Overlay -->
+    <div id="loading-screen" aria-hidden="false">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span>MSI</span><span class="pulse">.</span>
+            </div>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar"></div>
+            </div>
+            <div class="loader-status">
+                <span class="status-prefix">SYSTEM.INIT(): </span>
+                <span id="loader-status-text">INITIALIZING QUANTUM MODULES...</span>
+            </div>
+            <div class="loader-diagnostics">
+                <div class="diag-line">> CONNECTION: SECURE_CHANNEL</div>
+                <div class="diag-line">> PORTFOLIO_V2: ONLINE</div>
+                <div class="diag-line">> NEURAL_NETS: RUNNING</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#home" class="logo-link">
+                <span class="logo-prefix">&lt;</span>MSI <span class="logo-suffix">/&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
+                    <li><a href="#research" class="nav-link"><i class="fa-solid fa-brain"></i> Research</a></li>
+                    <li><a href="#timeline" class="nav-link"><i class="fa-solid fa-timeline"></i> Timeline</a></li>
+                    <li><a href="#achievements" class="nav-link"><i class="fa-solid fa-trophy"></i> Achievements</a></li>
+                    <li><a href="#contact" class="nav-link contact-nav-btn"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-tag">
+                        <span class="ping-dot"></span>
+                        <span class="tag-text">AVAILABLE FOR OPPORTUNITIES</span>
+                    </div>
+                    <h1 class="hero-headline">
+                        Building <span class="gradient-text">Intelligent</span> Software Solutions for the Future
+                    </h1>
+                    <p class="hero-subheadline">
+                        Computer Science Engineer specializing in Full Stack Development, Artificial Intelligence, and Machine Learning.
+                    </p>
+                    
+                    <!-- Coding Terminal Widget -->
+                    <div class="terminal-widget">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="term-btn close"></span>
+                                <span class="term-btn minimize"></span>
+                                <span class="term-btn expand"></span>
+                            </div>
+                            <div class="terminal-title">bash - md_sofiqul_islam@gub</div>
+                            <div class="terminal-actions">
+                                <i class="fa-solid fa-rotate-right terminal-reset-btn" title="Reset Simulation"></i>
+                            </div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line"><span class="prompt">guest@gub:~$</span> <span class="typed-command" data-cmd="profile --info"></span></div>
+                            <div class="terminal-output" id="terminal-profile-output"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-arrow-down"></i> View Projects</a>
+                        <a href="assets/resume.pdf" class="btn btn-secondary" download><i class="fa-solid fa-download"></i> Download Resume</a>
+                        <a href="#contact" class="btn btn-glow"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="avatar-orbit-container">
+                        <!-- Orbiting Icons -->
+                        <div class="orbit-icon orbit-python" title="Python"><i class="fa-brands fa-python"></i></div>
+                        <div class="orbit-icon orbit-react" title="React.js"><i class="fa-brands fa-react"></i></div>
+                        <div class="orbit-icon orbit-node" title="Node.js"><i class="fa-brands fa-node-js"></i></div>
+                        <div class="orbit-icon orbit-database" title="SQL / MongoDB"><i class="fa-solid fa-database"></i></div>
+                        <div class="orbit-icon orbit-brain" title="Machine Learning"><i class="fa-solid fa-brain"></i></div>
+                        
+                        <!-- Profile Card with Glassmorphic Border -->
+                        <div class="profile-card">
+                            <div class="card-glow"></div>
+                            <div class="profile-img-wrapper">
+                                <img src="assets\profile.jpg" alt="Md. Sofiqul Islam" class="profile-img">
+                            </div>
+                            <div class="profile-card-details">
+                                <h3 class="profile-name">Md. Sofiqul Islam</h3>
+                                <p class="profile-title">B.Sc. in CSE Graduate</p>
+                                <div class="profile-location">
+                                    <i class="fa-solid fa-location-dot"></i> Bangladesh
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-index">01.</span> About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-story">
+                        <p class="story-paragraph highlight-text">
+                            I am a Computer Science and Engineering graduate with experience in developing web applications, machine learning systems, and AI-powered solutions. I enjoy transforming complex problems into practical and user-friendly software.
+                        </p>
+                        <p class="story-paragraph">
+                            My goal is to create innovative technology that improves people's lives while continuously expanding my technical expertise. I combine a strong foundation in core engineering principles with an adaptive learning mindset. Currently, I am actively seeking roles in full-stack development, software engineering, and AI-driven systems, while preparing for advanced academic pursuits (higher studies) in the UK.
+                        </p>
+                        
+                        <h3 class="interests-title">Core Focus &amp; Interests</h3>
+                        <div class="interests-grid">
+                            <div class="interest-tag"><i class="fa-solid fa-gears"></i> Software Engineering</div>
+                            <div class="interest-tag"><i class="fa-solid fa-microchip"></i> Artificial Intelligence</div>
+                            <div class="interest-tag"><i class="fa-solid fa-diagram-project"></i> Machine Learning</div>
+                            <div class="interest-tag"><i class="fa-solid fa-layer-group"></i> Full Stack Development</div>
+                            <div class="interest-tag"><i class="fa-solid fa-chart-line"></i> Data Science</div>
+                            <div class="interest-tag"><i class="fa-solid fa-network-wired"></i> Smart Systems</div>
+                            <div class="interest-tag"><i class="fa-solid fa-hand-pointer"></i> Human Computer Interaction</div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats-panel">
+                        <div class="stats-glass-card">
+                            <div class="card-glow"></div>
+                            <h3 class="stats-header"><i class="fa-solid fa-calculator"></i> System Metrics</h3>
+                            <div class="metrics-grid">
+                                <div class="metric-item">
+                                    <span class="metric-value" id="metric-commits">0</span>
+                                    <span class="metric-label">Git Commits</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value" id="metric-projects">0</span>
+                                    <span class="metric-label">Projects Built</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value" id="metric-experience">0</span>
+                                    <span class="metric-label">Months Intern/Dev</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value" id="metric-hours">0</span>
+                                    <span class="metric-label">Active Dev Hours</span>
+                                </div>
+                            </div>
+                            <div class="diag-terminal">
+                                <div class="diag-title">SYSTEM STATUS</div>
+                                <div class="diag-row"><span class="lbl">UNIVERSITY:</span> <span class="val">GREEN UNI</span></div>
+                                <div class="diag-row"><span class="lbl">DEGREE:</span> <span class="val">B.SC IN CSE</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-index">02.</span> Technical Skills</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="skills-wrapper">
+                    <!-- Tab Navigation -->
+                    <div class="skills-tabs" role="tablist">
+                        <button class="skills-tab-btn active" role="tab" aria-selected="true" aria-controls="panel-languages" id="tab-languages">
+                            <i class="fa-solid fa-code"></i> Languages
+                        </button>
+                        <button class="skills-tab-btn" role="tab" aria-selected="false" aria-controls="panel-web" id="tab-web">
+                            <i class="fa-solid fa-globe"></i> Web Stack
+                        </button>
+                        <button class="skills-tab-btn" role="tab" aria-selected="false" aria-controls="panel-ai" id="tab-ai">
+                            <i class="fa-solid fa-brain"></i> AI &amp; Data
+                        </button>
+                        <button class="skills-tab-btn" role="tab" aria-selected="false" aria-controls="panel-tools" id="tab-tools">
+                            <i class="fa-solid fa-screwdriver-wrench"></i> Dev Tools
+                        </button>
+                    </div>
+
+                    <!-- Tab Panels -->
+                    <div class="skills-panels-container">
+                        <!-- Languages Panel -->
+                        <div class="skills-panel active" id="panel-languages" role="tabpanel" aria-labelledby="tab-languages">
+                            <div class="skills-grid">
+                                <div class="skill-item circular">
+                                    <div class="circular-progress" data-percentage="90" data-color="#00f2fe">
+                                        <div class="progress-value">0%</div>
+                                    </div>
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-desc">ML &amp; Scripting</span>
+                                </div>
+                                <div class="skill-item circular">
+                                    <div class="circular-progress" data-percentage="80" data-color="#00f2fe">
+                                        <div class="progress-value">0%</div>
+                                    </div>
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-desc">OOP Development</span>
+                                </div>
+                                <div class="skill-item circular">
+                                    <div class="circular-progress" data-percentage="85" data-color="#00f2fe">
+                                        <div class="progress-value">0%</div>
+                                    </div>
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-desc">Web Applications</span>
+                                </div>
+                                <div class="skill-item circular">
+                                    <div class="circular-progress" data-percentage="75" data-color="#00f2fe">
+                                        <div class="progress-value">0%</div>
+                                    </div>
+                                    <span class="skill-name">C++</span>
+                                    <span class="skill-desc">Algorithms / DS</span>
+                                </div>
+                                <div class="skill-item circular">
+                                    <div class="circular-progress" data-percentage="80" data-color="#00f2fe">
+                                        <div class="progress-value">0%</div>
+                                    </div>
+                                    <span class="skill-name">SQL</span>
+                                    <span class="skill-desc">Database Queries</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Web Stack Panel -->
+                        <div class="skills-panel" id="panel-web" role="tabpanel" aria-labelledby="tab-web">
+                            <div class="linear-skills-grid">
+                                <div class="linear-skill-item">
+                                    <div class="skill-info">
+                                        <span class="linear-skill-name">HTML5 &amp; CSS3</span>
+                                        <span class="linear-skill-percentage">95%</span>
+                                    </div>
+                                    <div class="linear-progress-track">
+                                        <div class="linear-progress-bar" data-width="95%"></div>
+                                    </div>
+                                </div>
+                                <div class="linear-skill-item">
+                                    <div class="skill-info">
+                                        <span class="linear-skill-name">React.js</span>
+                                        <span class="linear-skill-percentage">80%</span>
+                                    </div>
+                                    <div class="linear-progress-track">
+                                        <div class="linear-progress-bar" data-width="80%"></div>
+                                    </div>
+                                </div>
+                                <div class="linear-skill-item">
+                                    <div class="skill-info">
+                                        <span class="linear-skill-name">Node.js</span>
+                                        <span class="linear-skill-percentage">75%</span>
+                                    </div>
+                                    <div class="linear-progress-track">
+                                        <div class="linear-progress-bar" data-width="75%"></div>
+                                    </div>
+                                </div>
+                                <div class="linear-skill-item">
+                                    <div class="skill-info">
+                                        <span class="linear-skill-name">REST API Development</span>
+                                        <span class="linear-skill-percentage">85%</span>
+                                    </div>
+                                    <div class="linear-progress-track">
+                                        <div class="linear-progress-bar" data-width="85%"></div>
+                                    </div>
+                                </div>
+                                <div class="linear-skill-item">
+                                    <div class="skill-info">
+                                        <span class="linear-skill-name">MySQL &amp; MongoDB</span>
+                                        <span class="linear-skill-percentage">80%</span>
+                                    </div>
+                                    <div class="linear-progress-track">
+                                        <div class="linear-progress-bar" data-width="80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI & Data Panel -->
+                        <div class="skills-panel" id="panel-ai" role="tabpanel" aria-labelledby="tab-ai">
+                            <div class="linear-skills-grid">
+                                <div class="linear-skill-item">
+                                    <div class="skill-info">
+                                        <span class="linear-skill-name">Machine Learning</span>
+                                        <span class="linear-skill-percentage">80%</span>
+                                    </div>
+                                    <div class="linear-progress-track">
+                                        <div class="linear-progress-bar" data-width="80%"></div>
+                                    </div>
+                                </div>
+                                <div class="linear-skill-item">
+                                    <div class="skill-info">
+                                        <span class="linear-skill-name">Linear Regression &amp; Regression Algorithms</span>
+                                        <span class="linear-skill-percentage">85%</span>
+                                    </div>
+                                    <div class="linear-progress-track">
+                                        <div class="linear-progress-bar" data-width="85%"></div>
+                                    </div>
+                                </div>
+                                <div class="linear-skill-item">
+                                    <div class="skill-info">
+                                        <span class="linear-skill-name">Data Analysis &amp; Visualization</span>
+                                        <span class="linear-skill-percentage">75%</span>
+                                    </div>
+                                    <div class="linear-progress-track">
+                                        <div class="linear-progress-bar" data-width="75%"></div>
+                                    </div>
+                                </div>
+                                <div class="linear-skill-item">
+                                    <div class="skill-info">
+                                        <span class="linear-skill-name">AI Applications Development</span>
+                                        <span class="linear-skill-percentage">80%</span>
+                                    </div>
+                                    <div class="linear-progress-track">
+                                        <div class="linear-progress-bar" data-width="80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dev Tools Panel -->
+                        <div class="skills-panel" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools">
+                            <div class="skills-grid">
+                                <div class="skill-item tool">
+                                    <div class="tool-icon"><i class="fa-brands fa-git-alt"></i></div>
+                                    <span class="skill-name">Git</span>
+                                    <span class="skill-desc">Version Control</span>
+                                </div>
+                                <div class="skill-item tool">
+                                    <div class="tool-icon"><i class="fa-brands fa-github"></i></div>
+                                    <span class="skill-name">GitHub</span>
+                                    <span class="skill-desc">Collaborations</span>
+                                </div>
+                                <div class="skill-item tool">
+                                    <div class="tool-icon"><i class="fa-solid fa-terminal"></i></div>
+                                    <span class="skill-name">VS Code</span>
+                                    <span class="skill-desc">IDE &amp; Workflow</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-index">03.</span> Featured Projects</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <!-- Projects Filter -->
+                <div class="projects-filter-bar">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                    <button class="filter-btn" data-filter="ai-ml">AI &amp; ML</button>
+                    <button class="filter-btn" data-filter="smart-systems">Smart Systems</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1: Hospital Management System -->
+                    <article class="project-card" data-category="fullstack">
+                        <div class="project-card-header">
+                            <span class="proj-category"><i class="fa-solid fa-hospital"></i> Full Stack</span>
+                            <h3 class="project-title">Hospital Management System</h3>
+                        </div>
+                        <p class="project-summary">
+                            Complete system developed for patient care and administrative workflow management. Contains interactive dashboards, doctor scheduling, and appointments.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Database Systems</span>
+                            <span>Full Stack</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn btn-secondary btn-sm open-modal-btn" data-project="hms">Quick View <i class="fa-solid fa-expand"></i></button>
+                            <a href="http://hms-gub.free.nf" target="_blank" rel="noopener noreferrer" class="proj-link-icon" title="Live Project Link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Smart Home Automation System -->
+                    <article class="project-card" data-category="smart-systems">
+                        <div class="project-card-header">
+                            <span class="proj-category"><i class="fa-solid fa-house-laptop"></i> IoT &amp; Systems</span>
+                            <h3 class="project-title">Smart Home Automation System</h3>
+                        </div>
+                        <p class="project-summary">
+                            Voice-controlled smart home software integrated with motion sensors and responsive dashboard for device automation and environmental diagnostics.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span>Voice Controls</span>
+                            <span>Motion Detection</span>
+                            <span>Mobile Integration</span>
+                            <span>Smart Devices</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn btn-secondary btn-sm open-modal-btn" data-project="smarthome">Quick View <i class="fa-solid fa-expand"></i></button>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: House Price Prediction System -->
+                    <article class="project-card" data-category="ai-ml">
+                        <div class="project-card-header">
+                            <span class="proj-category"><i class="fa-solid fa-brain"></i> Machine Learning</span>
+                            <h3 class="project-title">House Price Prediction System</h3>
+                        </div>
+                        <p class="project-summary">
+                            Supervised Machine Learning project implementing Linear Regression to forecast real estate market prices based on multiple input factors.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span>Python</span>
+                            <span>Linear Regression</span>
+                            <span>Data Analysis</span>
+                            <span>Matplotlib</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn btn-secondary btn-sm open-modal-btn" data-project="houseprice">Quick View <i class="fa-solid fa-expand"></i></button>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: AI Multi-Game Platform -->
+                    <article class="project-card" data-category="ai-ml">
+                        <div class="project-card-header">
+                            <span class="proj-category"><i class="fa-solid fa-gamepad"></i> AI Applications</span>
+                            <h3 class="project-title">AI Multi-Game Platform</h3>
+                        </div>
+                        <p class="project-summary">
+                            Python GUI application hosting classic arcade games (Tic-Tac-Toe, Snake, Rock-Paper-Scissors) powered by artificial intelligence opponents.
+                        </p>
+                        <div class="project-tech-tags">
+                            <span>Python</span>
+                            <span>Tkinter GUI</span>
+                            <span>AI Algorithms</span>
+                            <span>Game Design</span>
+                        </div>
+                        <div class="project-card-footer">
+                            <button class="btn btn-secondary btn-sm open-modal-btn" data-project="multigame">Quick View <i class="fa-solid fa-expand"></i></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Detail Modal (Dynamic) -->
+        <div id="project-detail-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+            <div class="modal-window">
+                <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+                <div class="modal-content-container" id="modal-dynamic-content">
+                    <!-- Script will load project data here dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Research Section -->
+        <section id="research" class="research-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-index">04.</span> Research &amp; Academic Work</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="research-grid">
+                    <div class="research-info-card">
+                        <div class="research-tag"><i class="fa-solid fa-feather-pointed"></i> NLP Analysis &amp; Presentation</div>
+                        <h3 class="research-title">Efficient Estimation of Word Representations in Vector Space</h3>
+                        <p class="research-description">
+                            Conducted in-depth academic research analysis and comprehensive presentation exploring modern word embedding methodologies and vector representation architectures (Word2Vec, Skip-gram, Continuous Bag of Words) used in computational linguistics and natural language processing models.
+                        </p>
+                        <ul class="research-highlights">
+                            <li><i class="fa-solid fa-check text-cyan"></i> Analysis of neural network models for vocabulary vector spaces</li>
+                            <li><i class="fa-solid fa-check text-cyan"></i> Evaluation of computational complexity in large corpus datasets</li>
+                            <li><i class="fa-solid fa-check text-cyan"></i> Visualizing translation and relation offsets inside word representations</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-visualizer-card">
+                        <div class="visualizer-header">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                            <span class="title">Word2Vec Vector Math Visualizer</span>
+                        </div>
+                        <div class="visualizer-body">
+                            <p class="vis-explanation">Click a neural query below to calculate relationships inside NLP vector space:</p>
+                            
+                            <div class="vector-queries">
+                                <button class="vector-query-btn active" data-op="gender">King - Man + Woman</button>
+                                <button class="vector-query-btn" data-op="country">Paris - France + UK</button>
+                                <button class="vector-query-btn" data-op="verb">Walk - Walking + Swimming</button>
+                            </div>
+
+                            <div class="vector-equation-canvas">
+                                <div class="vector-box" id="box-v1">King</div>
+                                <div class="operator">-</div>
+                                <div class="vector-box" id="box-v2">Man</div>
+                                <div class="operator">+</div>
+                                <div class="vector-box" id="box-v3">Woman</div>
+                                <div class="operator">=</div>
+                                <div class="vector-box result" id="box-result">Queen</div>
+                            </div>
+                            
+                            <!-- Simple custom canvas representing Word Dimensions space -->
+                            <div class="canvas-wrapper">
+                                <canvas id="word-vector-canvas"></canvas>
+                                <span class="axis-label x-axis">Dimension 1 (Semantic Gender)</span>
+                                <span class="axis-label y-axis">Dimension 2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="timeline" class="timeline-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-index">05.</span> Engineering Timeline</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line">
+                        <div class="timeline-progress-bar"></div>
+                    </div>
+
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item" id="item-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="time-header">
+                                <span class="time-period">Green University of Bangladesh</span>
+                                <span class="time-title">CSE Academic Journey</span>
+                            </div>
+                            <h3 class="timeline-event-title">B.Sc. in Computer Science and Engineering</h3>
+                            <p class="timeline-event-desc">
+                                Enrolled in Green University of Bangladesh, laying down a strong engineering foundation in algorithms, databases, artificial intelligence, networking, and software systems.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item" id="item-2">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="time-header">
+                                <span class="time-period">8 Months Duration</span>
+                                <span class="time-title">Project Lead</span>
+                            </div>
+                            <h3 class="timeline-event-title">Hospital Management System (HMS)</h3>
+                            <p class="timeline-event-desc">
+                                Led the development team to design, structure, and deploy a complete Hospital Management System website. Handled patient databases, user logins, scheduling modules, and server administration.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item" id="item-3">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="time-header">
+                                <span class="time-period">IoT &amp; Engineering</span>
+                                <span class="time-title">Academic Collaboration</span>
+                            </div>
+                            <h3 class="timeline-event-title">Smart Home Automation System</h3>
+                            <p class="timeline-event-desc">
+                                Created a system allowing remote smart home integration via voice processing commands and motion security sensors. Programmed smart devices in collaboration with team members.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item" id="item-4">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="time-header">
+                                <span class="time-period">AI &amp; Data Project</span>
+                                <span class="time-title">ML Developer</span>
+                            </div>
+                            <h3 class="timeline-event-title">House Price Prediction Model</h3>
+                            <p class="timeline-event-desc">
+                                Programmed a machine learning prediction program using Python. Used Linear Regression algorithms to forecast regional housing market pricing charts based on multi-variate variables.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5 -->
+                    <div class="timeline-item" id="item-5">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="time-header">
+                                <span class="time-period">Application Development</span>
+                                <span class="time-title">Independent Developer</span>
+                            </div>
+                            <h3 class="timeline-event-title">AI Multi-Game Desktop Platform</h3>
+                            <p class="timeline-event-desc">
+                                Created a unified desktop arcade interface hosting classic gaming environments. Engineered AI opponents utilizing heuristic matching algorithms (Minimax, AI patterns) for responsive game-play.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Contribution Chart Grid (Extra Premium Feature) -->
+        <section class="github-grid-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-index">06.</span> Codebase Activity</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="github-card">
+                    <div class="card-glow"></div>
+                    <div class="git-header">
+                        <div class="git-title">
+                            <i class="fa-brands fa-github text-cyan"></i>
+                            <span>sofiqul-islam-dev / Contributions</span>
+                        </div>
+                        <span class="git-summary-stat">1,432 commits in the past year</span>
+                    </div>
+
+                    <!-- Calendar Grid Wrapper -->
+                    <div class="git-calendar-wrapper">
+                        <div class="git-calendar" id="github-contributions-grid">
+                            <!-- JS will generate 53 columns x 7 rows grid -->
+                        </div>
+                    </div>
+
+                    <div class="git-footer">
+                        <div class="git-legend">
+                            <span>Less</span>
+                            <span class="legend-cell level-0"></span>
+                            <span class="legend-cell level-1"></span>
+                            <span class="legend-cell level-2"></span>
+                            <span class="legend-cell level-3"></span>
+                            <span class="legend-cell level-4"></span>
+                            <span>More</span>
+                        </div>
+                        <div class="git-streak-box">
+                            <span>Current Streak: <strong>14 Days</strong></span>
+                            <span class="divider">|</span>
+                            <span>Longest Streak: <strong>48 Days</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-index">07.</span> Engineering Achievements</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="achievements-grid">
+                    <!-- Card 1 -->
+                    <div class="achievement-card">
+                        <div class="card-glow"></div>
+                        <div class="achievement-badge"><i class="fa-solid fa-medal"></i></div>
+                        <h3 class="achievement-title">Lead Developer, Hospital Management</h3>
+                        <p class="achievement-desc">Directed an 8-month academic development project, coordinating database deployment, frontend creation, and user management modules.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="achievement-card">
+                        <div class="card-glow"></div>
+                        <div class="achievement-badge"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3 class="achievement-title">AI &amp; ML System Architect</h3>
+                        <p class="achievement-desc">Programmed multiple standalone intelligence projects including regression models, gaming AI algorithms, and vector space analysis simulations.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="achievement-card">
+                        <div class="card-glow"></div>
+                        <div class="achievement-badge"><i class="fa-solid fa-code-merge"></i></div>
+                        <h3 class="achievement-title">Full Stack Web Engineering</h3>
+                        <p class="achievement-desc">Adept at connecting robust backend systems (NodeJS, Express, Databases) with sleek, animated, interactive client-side interfaces (React, Web API).</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="achievement-card">
+                        <div class="card-glow"></div>
+                        <div class="achievement-badge"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3 class="achievement-title">Strong Academic Project Portfolio</h3>
+                        <p class="achievement-desc">Earned high recognition for engineering and software implementation projects throughout the B.Sc. in CSE program at Green University of Bangladesh.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="achievement-card">
+                        <div class="card-glow"></div>
+                        <div class="achievement-badge"><i class="fa-solid fa-circle-nodes"></i></div>
+                        <h3 class="achievement-title">NLP Research Presentation</h3>
+                        <p class="achievement-desc">Delivered a detailed academic analysis presentation on Word Representations in Vector Space (Word2Vec) and vector mathematical dimensions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="title-index">08.</span> Let's Connect</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 class="contact-subtitle">System Connection Details</h3>
+                        <p class="contact-text">
+                            Whether you want to discuss full-stack opportunities, AI research collaborations, or want to say hello - my inbox is always open. I will get back to you as soon as possible.
+                        </p>
+                        
+                        <div class="contact-channels">
+                            <div class="channel-card">
+                                <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="channel-details">
+                                    <span class="channel-lbl">Direct Email</span>
+                                    <a href="mailto:sifatsadein@gmail.com" class="channel-val">sifatsadein@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="channel-card">
+                                <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                                <div class="channel-details">
+                                    <span class="channel-lbl">LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/md-sofiqul-islam2212/" target="_blank" rel="noopener noreferrer" class="channel-val">md-sofiqul-islam2212</a>
+                                </div>
+                            </div>
+                            <div class="channel-card">
+                                <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+                                <div class="channel-details">
+                                    <span class="channel-lbl">GitHub</span>
+                                    <a href="https://github.com/SofikulIslamSifat" target="_blank" rel="noopener noreferrer" class="channel-val">SofikulIslamSifat</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form id="portfolio-contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="contact-name" name="name" required placeholder=" ">
+                                <label for="contact-name">Your Name</label>
+                                <span class="form-underline"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="contact-email" name="email" required placeholder=" ">
+                                <label for="contact-email">Email Address</label>
+                                <span class="form-underline"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" id="contact-subject" name="subject" required placeholder=" ">
+                                <label for="contact-subject">Message Subject</label>
+                                <span class="form-underline"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="contact-message" name="message" required placeholder=" " rows="5"></textarea>
+                                <label for="contact-message">Transmission Content</label>
+                                <span class="form-underline"></span>
+                            </div>
+
+                            <!-- Human verification puzzle -->
+                            <div class="verification-slider-container">
+                                <span class="slider-bg-text">Slide to Verify Human Identity</span>
+                                <div class="slider-handle" id="form-slider-handle">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </div>
+                                <div class="slider-filled-track"></div>
+                                <input type="hidden" id="slider-verified" value="false">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block form-submit-btn" disabled>
+                                <i class="fa-solid fa-paper-plane"></i> Initialize Transmission
+                            </button>
+                        </form>
+                        <div id="form-response-msg" class="form-status-msg" aria-live="polite"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Back to Top -->
+    <button id="back-to-top" aria-label="Scroll to top" title="Scroll to top">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+
+    <!-- Professional Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-text">&lt;MSI /&gt;</span>
+                    <p class="brand-tagline">Building intelligent software systems and full stack applications.</p>
+                </div>
+                <div class="footer-social-links">
+                    <a href="https://github.com/SofikulIslamSifat" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/md-sofiqul-islam2212/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:sifatsadein@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; 2026 Md. Sofiqul Islam. All rights reserved.</p>
+                <div class="footer-metadata">
+                    <span>STATUS: ACTIVE_NODE</span>
+                    <span class="separator">•</span>
+                    <span>LOC: BANGLADESH</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
